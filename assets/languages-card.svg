@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 145" width="100%" height="100%">
+  <defs>
+    <linearGradient id="langCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0A13" />
+      <stop offset="100%" stop-color="#11070D" />
+    </linearGradient>
+    <linearGradient id="langBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#701A3D" stop-opacity="0.7" />
+      <stop offset="50%" stop-color="#C77B9B" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#451126" stop-opacity="0.6" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+  </style>
+
+  <!-- Frame -->
+  <rect width="920" height="145" rx="14" fill="url(#langCardBg)" stroke="url(#langBorder)" stroke-width="1.2" />
+
+  <!-- Title Section -->
+  <g transform="translate(35, 34)">
+    <circle cx="6" cy="-4" r="3.5" fill="#E5B5C7" />
+    <text x="18" y="0" fill="#E5B5C7" class="font-mono" font-size="11" font-weight="600" letter-spacing="1.5">CODEBASE LANGUAGE DISTRIBUTION</text>
+    <text x="850" y="0" text-anchor="end" fill="#F8F0F3" class="font-sans" font-size="13" font-weight="600">~9.76 MB Production Source Code</text>
+  </g>
+
+  <!-- Segmented Progress Bar -->
+  <g transform="translate(35, 52)">
+    <!-- Bar background -->
+    <rect width="850" height="12" rx="6" fill="#1F0C16" />
+
+    <!-- Clip Path for rounded corners -->
+    <clipPath id="barClip">
+      <rect width="850" height="12" rx="6" />
+    </clipPath>
+
+    <g clip-path="url(#barClip)">
+      <!-- Python & Jupyter (82.7%) -> 702.95px -->
+      <rect x="0" y="0" width="703" height="12" fill="#E5B5C7" />
+      <!-- TypeScript & JavaScript (12.9%) -> 109.65px -->
+      <rect x="703" y="0" width="110" height="12" fill="#C77B9B" />
+      <!-- HTML & CSS (3.8%) -> 32.3px -->
+      <rect x="813" y="0" width="32" height="12" fill="#701A3D" />
+      <!-- Shell & Other (0.6%) -> 5.1px -->
+      <rect x="845" y="0" width="5" height="12" fill="#451126" />
+    </g>
+  </g>
+
+  <!-- Legend Section -->
+  <g transform="translate(35, 96)" class="font-mono" font-size="11">
+    <!-- Python & Notebooks -->
+    <g transform="translate(0, 0)">
+      <circle cx="6" cy="6" r="4.5" fill="#E5B5C7" />
+      <text x="18" y="10" fill="#F8F0F3" font-weight="600">Python / Jupyter</text>
+      <text x="135" y="10" fill="#A37385">82.7% (8.07 MB)</text>
+    </g>
+
+    <!-- TypeScript & JavaScript -->
+    <g transform="translate(290, 0)">
+      <circle cx="6" cy="6" r="4.5" fill="#C77B9B" />
+      <text x="18" y="10" fill="#F8F0F3" font-weight="600">TypeScript / JS</text>
+      <text x="130" y="10" fill="#A37385">12.9% (1.27 MB)</text>
+    </g>
+
+    <!-- Web (HTML/CSS) -->
+    <g transform="translate(565, 0)">
+      <circle cx="6" cy="6" r="4.5" fill="#701A3D" />
+      <text x="18" y="10" fill="#F8F0F3" font-weight="600">HTML / CSS</text>
+      <text x="100" y="10" fill="#A37385">3.8% (372 KB)</text>
+    </g>
+
+    <!-- Systems / Shell -->
+    <g transform="translate(755, 0)">
+      <circle cx="6" cy="6" r="4.5" fill="#451126" />
+      <text x="18" y="10" fill="#F8F0F3" font-weight="600">Shell</text>
+      <text x="56" y="10" fill="#A37385">0.6%</text>
+    </g>
+  </g>
+</svg>
